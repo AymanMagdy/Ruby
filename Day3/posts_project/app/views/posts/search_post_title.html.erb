@@ -1,0 +1,73 @@
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Show Post</h1>
+                    <form action="/show_details" method="GET">
+                        <div class="form-group">
+                            <label for="title"> Show title 
+                            <input type="text" readonly class="form-control" name="post_title" value=<%=@post_title%> >
+                        </div>
+
+                        <label for="title"> Created at
+                            <input type="text"  readonly class="form-control" value=<%=@post_created_at%>> 
+                            <label for="title"> Last update at
+                            <input type="text"  readonly class="form-control" value=<%=@post_last_update%>>
+                        
+                        <div class="form-group">
+                            <label for="description">Post</label>
+                            <textarea rows="5" readonly class="form-control" name="post_content"><%=@post_content%></textarea>
+                        </div>
+                        
+                        <button type="submit" name="post_to_update" value=<%=@post_id%> formaction="/update_post_form" class="btn btn-outline-success my-2 my-sm-0">
+                            Edit
+                        </button>
+
+                        <button type="submit" name="post_to_delete" value=<%=@post_id%> formaction="/delete_post" class="btn btn-outline-danger my-2 my-sm-0">
+                            Delete
+                        </button>
+
+                        <div>
+                        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+                        <!------ Include the above in your HEAD tag ---------->
+                        
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8">
+
+                                        <div class="page-header">
+                                            <h1><small class="pull-right"></small> Comments </h1>
+                                        </div> 
+
+                                        <div class="comments-list">
+                                            <div class="media">
+                                                <p class="pull-right"><small>5 days ago</small></p>
+                                                <a class="media-left" href="#">
+                                                    <img src="http://lorempixel.com/40/40/people/1/">
+                                                </a>
+                                                <div class="media-body">
+                                                    
+                                                    <h4 class="media-heading user_name">Baltej Singh</h4>
+                                                    Wow! this is really great.
+                                                    
+                                                    <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
+                    <form>
+            </div>
+        </div>
+    </div>
+</body>

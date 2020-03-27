@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="posts-project-nav-bar">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to 'New Post', '/add_post', class: "nav-link"%>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'List Posts', '/list_posts', class: "nav-link"%>
+      </li>
+    </ul>
+    <form action="/search_post_title" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="search_post" placeholder="Search by title" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
